@@ -29,14 +29,6 @@ public class OrderProductId implements Serializable {
         this.product = product;
     }
 
-    public void setOrder(Order order) {
-        this.order = order;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
     public Order getOrder() {
         return order;
     }

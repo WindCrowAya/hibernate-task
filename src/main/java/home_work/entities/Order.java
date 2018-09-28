@@ -1,11 +1,7 @@
 package home_work.entities;
 
-import home_work.entities.ids.OrderProductId;
-
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "orders")
@@ -15,9 +11,6 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
     private int orderId;
-
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "order")
-//    private List<OrderProductId> orderProductIds = new ArrayList<>();
 
     @Column(name = "address", nullable = false)
     private String address;

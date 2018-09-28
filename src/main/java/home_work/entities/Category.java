@@ -7,15 +7,12 @@ import javax.persistence.*;
 public class Category {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "category_id")
     private int categoryId;
 
-//  TODO: как заполнять поле parent_category_id ?
-//    @Column(name = "parent_category_id")
     @ManyToOne
-    @JoinColumn(name = "category_id", insertable = false, updatable = false)  //одно из полей, если оно ссылается на один и тот же столбец
-    private Category parentCategory;                                          //д.б. помечено как insertable = false, updatable = false
+    @JoinColumn(name = "category_id", insertable = false, updatable = false)
+    private Category parentCategory;
 
     @Column(name = "category_name", nullable = false)
     private String categoryName;
